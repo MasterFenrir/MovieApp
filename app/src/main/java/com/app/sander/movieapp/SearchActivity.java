@@ -1,14 +1,15 @@
 package com.app.sander.movieapp;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 
-public class SearchActivity extends AppCompatActivity {
+public class SearchActivity extends Activity {
 
     public final static String EXTRA_MESSAGE = "com.app.sander.movieapp.MESSAGE";
 
@@ -21,7 +22,8 @@ public class SearchActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_search, menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_activity_actions, menu);
         return true;
     }
 
